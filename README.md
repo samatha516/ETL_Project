@@ -5,7 +5,7 @@ In our ETL_Project, we intent to use the NFL game and score information from Kag
 Data Extract:
 
 1) https://www.kaggle.com/tobycrabtree/nfl-scores-and-betting-data
-   Downloaded scores, teams, and stadiums data as csv files
+- Downloaded scores, teams, and stadiums data as csv files
 
 2) Player Position: http://stats.washingtonpost.com/fb/glossary.asp   
 
