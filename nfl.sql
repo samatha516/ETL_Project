@@ -1,4 +1,13 @@
--- Create Two Tables
+-- Create NFL Tables
+--drop table teams;
+--drop table stadiums;
+--drop table scores;
+--drop table most_valuable_player;
+--drop table mvp_position;
+--drop table player_position;
+--drop table sb_quarterbacks;
+--drop table sb_winners;
+
 CREATE TABLE teams (
   team_name char(60) PRIMARY KEY,
   team_name_short char(40),
@@ -45,9 +54,12 @@ create table sb_winners(
 create table sb_quarterbacks(
 	sb_no char(10) primary key,
 	year char(4),
+	winner_conf	char(3),
 	winner_team	char(60),
-	loser_team	char(60), 
 	winner_qb char(60),
+	also_mvp char(3),
+	loser_conf char(3),
+	loser_team	char(60), 	
 	loser_qb char(60)
 );
 
@@ -59,8 +71,3 @@ create table most_valuable_player(
 	highlights text
 );
 
-create table mvp_position as(
-select mvp.sb_no, mvp.player, mvp.position_abbr, pp.position, mvp.team, mvp.highlights
-from most_valuable_player mvp,
-     player_position pp
-where trim(mvp.position_abbr) = trim(pp.abbreviation));
