@@ -48,13 +48,12 @@ create table sb_winners(
 	winner_team char(60), 
 	winner_score int,
 	loser_team  char(60), 
-	loser_score int,
-	city char(40)
+	loser_score int
 );
 
 create table sb_quarterbacks(
 	sb_no char(10) primary key,
-	year char(4),
+	year int,
 	winner_conf	char(3),
 	winner_team	char(60),
 	winner_qb char(60),
