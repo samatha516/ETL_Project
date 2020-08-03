@@ -28,10 +28,10 @@ update scores
 
 --drop table superbowl;
 -- below table is created in jupyter notebook
-create table superbowl as(  
-select sb.sb_no, sb.year, qb.winner_conf, wd.winner_div, trim(qb.winner_team) as winner_team, 
+create table superbowl as(
+   select sb.sb_no, sb.year, qb.winner_conf, wd.winner_div, trim(qb.winner_team) as winner_team, 
        sb.winner_score, trim(qb.winner_qb) as winner_qb, qb.also_mvp, trim(s.stadium) as stadium, 
-	   trim(sb.city) as city, trim(st.state) as state,
+	   trim(st.city) as city, trim(st.state) as state,
        qb.loser_conf, ld.loser_div, trim(qb.loser_team) as loser_team, 
 	   sb.loser_score, trim(qb.loser_qb) as loser_qb
   from sb_winners sb, sb_quarterbacks qb, winner_div as wd, loser_div as ld, scores as s, stadiums as st
@@ -42,4 +42,5 @@ select sb.sb_no, sb.year, qb.winner_conf, wd.winner_div, trim(qb.winner_team) as
    and lower(trim(qb.loser_team)) = lower(trim(ld.loser_team))
    and (sb.year - 1) = s.schedule_season
    and lower(trim(s.schedule_week)) = 'superbowl'
-   and lower(trim(s.stadium)) = lower(trim(st.stadium_name)));
+   and lower(trim(s.stadium)) = lower(trim(st.stadium_name))
+   order by year);

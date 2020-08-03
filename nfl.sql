@@ -20,9 +20,14 @@ CREATE TABLE teams (
 
 CREATE TABLE stadiums (
   stadium_name char(60) PRIMARY KEY,
+  stadium_type char(15),
+  stadium_weather_type char(15),
+  stadium_capacity char(10),
   city char(60),
   state char(60)
 );
+
+select * from stadiums;
 
 create table scores(
 	id int primary key,
