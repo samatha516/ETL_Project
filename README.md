@@ -47,6 +47,7 @@ In our ETL_Project, we intent to use the NFL game and score information from Kag
 - Created additional tables using 'create table tablename as (select ....)
 - Finally one table for retrieving all the information that is needed to dispaly for all 54 Super bowl games. 
 - Created a super bowl dataframe from the above table using pd.read_sql_query for data visualization.
+- The superbowl table was created by joining sb_winners, sb_quarterbacks, winner_div, loser_div, scores, and stadiums on the columns superbowl #, team, year, and stadium name.
 
 # Conclusion:
-  - One can do the prediction analysis based this historical data that was captured, transformed and loaded and then transformed again.
+  - One can do the predictive analytics based this historical data that was captured, transformed and loaded and then transformed again.
