@@ -5,6 +5,8 @@
 In our ETL_Project, we intent to use the NFL game and score information from Kaggle (see link below) to create a database with key Superbowl statistics – including games, stadium, winning/losing teams, mvp player, key highlights, etc.  We will use Pandas to extract and clean up the data, load the data into SQL databases, and use SQL to extract information from different datasets or tables.  
 
 # Data Extract:
+- Scrape the data from wbesites using BeautifulSoup and requests. html parser has been used for parsing html.
+- Defined a function to scrape the data as there are 4 different websites to scrape.
 - https://www.topendsports.com/events/super-bowl/winners-list.htm
   - The list of all the teams played in Super Bowl since Green Bay won the first in 1967. The years listed indicate the year the Super Bowl was played, the regular season is 
     played during the year before.
@@ -24,12 +26,12 @@ In our ETL_Project, we intent to use the NFL game and score information from Kag
     Football Reference.
   - teams.csv - NFL teams, team IDs, and conferences
   - stadiums.csv
-  ![NFL_Stadiums](NFL_teams_locations.png)
-  
+   
 # Data Transformation:
-- Cleaning up data: Removing special character using regular expressions 
-- Dropped columns that are not needed and renamed the columns for consistency
-- Stripping data into multiple columns based on coditions
+- Cleaning up data: Removing special characters using regular expressions 
+- Dropped the rows from dataframes that were added when the data was scraped. 
+- Dropped columns that are not considered in this analysis.
+- Stripping data into multiple columns based on coditions.
 # Data Load:
 - Loaded the data from pandas dataframes to Postgres Database.
 - Created tables by joining the tables and converted them to pandas dataframe
