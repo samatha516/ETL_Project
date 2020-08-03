@@ -25,9 +25,9 @@ In our ETL_Project, we intent to use the NFL game and score information from Kag
   - teams.csv - NFL teams, team IDs, and conferences
   - stadiums.csv
  - Extraction process:
- . Scraped the data from wbesites using BeautifulSoup and requests. html parser has been used for parsing html.
- . Defined a function to scrape the data as there are 4 different websites to scrape.
- . Parsed html was converted to dataframe using pd.read_html and the csv files were converted to dataframe using pd.read_csv.
+    . Scraped the data from wbesites using BeautifulSoup and requests. html parser has been used for parsing html.
+    . Defined a function to scrape the data as there are 4 different websites to scrape.
+    . Parsed html was converted to dataframe using pd.read_html and the csv files were converted to dataframe using pd.read_csv.
    
 # Data Transformation:
 - 
